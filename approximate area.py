@@ -16,8 +16,7 @@ def approximate_area(radius, step):
                 inside_count += 1
             y += step
         x += step
-    return inside_count * step * step
-
+    return inside_count * (step**2)
 # ==============================================
 # different steps for the unit circle
 radius = 1.0
