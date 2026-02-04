@@ -37,7 +37,6 @@ for i in range(N):
     if f(x_left) * f(x_right) < 0:
         root = bisection(x_left, x_right)
         if root is not None:
-            # avoid duplicates
             if not any(abs(root - r) < 1e-4 for r in roots):
                 roots.append(root)
     x_left = x_right
