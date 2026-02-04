@@ -8,7 +8,6 @@ def df(x):
 
 # ---------- Relaxation Method ----------
 def relaxation(a, b, x0, alpha, eps, max_iter=50):
-    print("\n--- Relaxation Method ---")
     x = x0
     for i in range(1, max_iter+1):
         x_new = x + alpha * f(x)
@@ -20,7 +19,6 @@ def relaxation(a, b, x0, alpha, eps, max_iter=50):
 
 # ---------- Newton Method ----------
 def newton(a, b, x0, eps, max_iter=50):
-    print("\n--- Newton Method ---")
     x = x0
     for i in range(1, max_iter+1):
         x_new = x - f(x) / df(x)
@@ -32,7 +30,6 @@ def newton(a, b, x0, eps, max_iter=50):
 
 # ---------- Bisection Method ----------
 def bisection(a, b, eps, max_iter=50):
-    print("\n--- Bisection Method ---")
     for i in range(1, max_iter+1):
         c = (a + b) / 2
         print(i, c, f(c))
@@ -50,6 +47,9 @@ eps = 1e-6
 x0 = 2.5     
 alpha = -0.25
 
+print("Relaxation Method:")
 relaxation(a, b, x0, alpha, eps, 50)
+print("\nNewton Method:")
 newton(a, b, x0, eps, 50)
+print("\nBisection Method:")
 bisection(a, b, eps, 50)
