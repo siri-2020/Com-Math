@@ -42,4 +42,4 @@ for i in range(N):
                 roots.append(root)
     x_left = x_right
 
-print(roots)
+print("Roots: ", roots)
